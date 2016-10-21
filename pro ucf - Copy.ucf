@@ -1,0 +1,10 @@
+NET "CCLK" LOC = AH17 | IOSTANDARD = "LVCMOS25";
+NET  "clock"             LOC="AH15"; 
+TIMESPEC TS_clock = PERIOD "CCLK" 20 ns HIGH 50%;
+NET  "led"           LOC="E8";
+NET  "bitclk"           LOC="AF18";
+NET  "sdout"          LOC="AG16";
+NET  "synch"           LOC="AF19";
+NET  "reset"           LOC="AG17";
+NET  "rstbt"           LOC="U8";
+NET "clock" TNM_NET = CCLK;

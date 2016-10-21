@@ -1,0 +1,20 @@
+ 	
+NET "RST" LOC = "V8" ;  	
+	
+	
+	
+	
+NET  "ut"           LOC="AG12";
+
+
+
+
+NET "BITCLK" LOC = "AF18" ;	
+NET "AUDSYNC" LOC = "AF19" ;	
+NET "AUDSDO" LOC = "AG16" ;
+NET  "CCLK"             LOC="AH15"; 
+NET "AUDSDI" LOC = "AE18" ;
+
+
+NET  "AUDRST"           LOC="AG17";
+NET  "at"           LOC="U8";
