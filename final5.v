@@ -86,18 +86,18 @@ always@(posedge clock) 		//reseting codec first time if reset button is presssed
 always @(posedge bitclk) 
       begin
 				if (reset == 0)
-					frcount = 0;
+					frcount <= 0;
 					
 		
 				if(bit_count == 255 && frcount == 5)
 					begin
 				
 					frame <= {16'hF800, 20'h0A0A0, 20'h00000, pcm_data, pcm_data, 160'h0};
-					frcount = 5;
-					index = index+1;
+					frcount <= 5;
+					index <= index+1;
 					end
 				if(bit_count == 255 && frcount < 5)
-					frcount = frcount+1;
+					frcount <= frcount+1;
 				if(bit_count == 255 && frcount == 0)
 					frame <= frame0;
 				else if(bit_count == 255 && frcount == 1)
@@ -123,13 +123,13 @@ always @(posedge bitclk)
 				synch <= 1'b1;
 				if (bit_count == 16)
 				synch <= 1'b0;
-				sdout = frame[bit_count];
+				sdout <= frame[bit_count];
 				if(reset==0)
 				begin
-				bit_count = 0;
-				sdout = 0;
+				bit_count <= 0;
+				sdout <= 0;
 				end
 				else
-				bit_count = bit_count+1;
+				bit_count <= bit_count+1;
 		end		
 
