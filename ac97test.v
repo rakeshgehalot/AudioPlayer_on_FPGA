@@ -1,11 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Engineer:        rakesh
-// Create Date:     19:29:04 04/17/2011  
-// Module Name:     ac97test 
-// Project Name:    AC-97 Controller Test
-// Description:     Top Module for AC-97 controller test project.
-//////////////////////////////////////////////////////////////////////////////////
 module ac97test(
 	input CCLK,
 	input RST,
@@ -46,12 +39,7 @@ endmodule
 
 
 
-//////////////////////////////////////////////////////////////////////////////////
-// Engineer:       John Ruddy
-// Create Date:    20:25:25 04/16/2011  
-// Module Name:    genac97  
-// 
-// Description: Test module for AC97 controller
+
 //////////////////////////////////////////////////////////////////////////////////
 module genac97(
 		input CCLK,
@@ -181,13 +169,6 @@ endmodule
 
 
 
-//////////////////////////////////////////////////////////////////////////////////
-// Engineer:        John Ruddy
-// Create Date:     22:28:38 04/13/2011 
-// Module Name:     s6ac97 
-// Project Name:    AC-97 Controller 
-// Description:     Controller for the AC-97 Codec
-//////////////////////////////////////////////////////////////////////////////////
 
 module s6ac97(
 	  input sys_clk,  //100MHz max(timing parameters designed for 100MHz)
